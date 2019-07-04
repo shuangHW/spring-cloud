@@ -77,3 +77,91 @@
 ![微信扫码加入猿天地知识星球](https://upload-images.jianshu.io/upload_images/2685774-b11318670c1457fa.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![猿天地](https://upload-images.jianshu.io/upload_images/2685774-17a60e1ead7fd232.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
+
+
+
+
+
+
+
+
+对于这套源码，最好的学习方式是跟着我的书籍一步步去学习，这样理解的会比较深刻，如果直接一上来就想把整个项目启动还是比较麻烦的，主要是依赖于太多东西了，今天跟大家介绍下如何启动所有的项目和如何进行测试。
+
+## 下载源码
+
+首先将整个仓库clone到本地，或者下载源码到本地也可以。
+
+克隆仓库命令：git clone <https://github.com/yinjihuan/spring-cloud.git>
+
+或者下载源码压缩包：
+
+
+
+![img](https:////upload-images.jianshu.io/upload_images/2685774-a46268093016c6aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
+
+1.png
+
+在电脑上建一个目录存储起来就可以了，如下图：
+
+
+
+![img](https:////upload-images.jianshu.io/upload_images/2685774-c2b9b91d7eb7900c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/373/format/webp)
+
+2.png
+
+接着就是导入你的开发工具中去，这边不做讲解，导入进去我们会发现少了一些jar包，这些jar包分别是：
+
+- cxytiandi-conf-client
+   这是我自己写的配置中心的客户端，代码地址：<https://github.com/yinjihuan/smconf> 同样的也需要大家下载到本地，因为我没发布到中央仓库，导入到开发工具中或者安装到本地的maven仓库，私服都行。
+- cxytiandi-jdbc
+   是基于JdbcTemplate封装的一个简易的ORM框架，代码地址：<https://github.com/yinjihuan/smjdbctemplate> 使用方式同上
+- spring-boot-starter-swagger
+   API文档管理，代码地址：<https://github.com/yinjihuan/spring-boot-starter-swagger> 使用方式同上
+
+## 启动fangjia-eureka
+
+上面好了之后我们就可以启动项目了，首选启动的是fangjia-eureka，执行EurekaServerApplication中的main方法即可。测试的话单节点就够了，如果要启动集群可以参考我的文章。
+
+启动后在浏览器中访问<http://localhost:8761/> 就可以打开Eureka的管理页面，这个时候会提示验证身份，输入用户名yinjihuan和密码123456就可以了。
+
+## 启动fangjia-fsh-house-service
+
+接着我们启动一个具体的服务，比如：fangjia-fsh-house-service，执行FshHouseServiceApplication中的main方法。
+
+这个时候会发现一只在连接zookeeper，修改配置文件中的地址为你自己的zookeeper地址
+
+```
+zookeeper.url=192.168.10.47:2181
+```
+
+这个zookeeper是我们配置中心用到的，配置中心也需要部署起来，配置中心的使用请查看：<https://github.com/yinjihuan/smconf>
+
+如果你不想使用注册中心里的配置可以在配置文件中指定使用本地的配置，也就是conf包中实体类中默认的值，但是zookeeper的地址还是要配置的。
+
+```
+smconf.data.status=local
+```
+
+里面还有rabbitmq的配置，mysql配置集成到了配置中心，如需修改可以直接修改实体类或者配置文件。
+
+启动成功后访问<http://localhost:8081/house/1> 有数据就证明成功了。
+
+## 启动fangjia-fsh-api
+
+执行ZuulApplication的main方法即可。同样需要配置zookeeper地址。
+
+api中默认代理了所有服务，直接通过 <http://localhost:2103/fsh-house/house/1>就可以访问我们刚刚启动的house服务了。
+
+至于网关其他的功能大家可以慢慢的去测试。
+
+作者：尹吉欢
+
+链接：https://www.jianshu.com/p/677d26fb2f84
+
+来源：简书
+
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+
