@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring-cloud-all</artifactId>
+        <groupId>com.fangjia</groupId>
+        <version>1.0</version>
+		<!-- <relativePath>../spring-cloud-all <relativePath> -->
+    </parent>
+	
+	
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>Spring-Cloud-Book-Code-2</artifactId>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <url>http://www.aaaa.com</url>
+
+     <modules>
+        <module>ch-2</module>
+		<module>ch-3</module>
+		<module>ch-4</module>
+        <module>ch-5</module>
+		<module>ch-6</module>
+		<module>ch-7</module>
+		<module>ch-8</module>
+		<module>ch-9</module>
+		<module>ch-10</module>
+		<module>ch-11</module>
+		<module>ch-12</module>
+		<module>ch-13</module>
+		<module>ch-14</module>
+		<module>ch-15</module>
+		<module>ch-16</module>
+		<module>ch-17</module>
+		<module>ch-18</module>
+		<module>ch-19</module>
+		<module>ch-20</module>
+		<module>ch-21</module>
+    </modules>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <!-- 编码和编译和JDK版本 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

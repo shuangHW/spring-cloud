@@ -3,20 +3,17 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.cxytiandi</groupId>
 	<artifactId>auth-common</artifactId>
-	<version>1.0</version>
 	<packaging>jar</packaging>
-
 	<name>auth-common</name>
 	<url>http://maven.apache.org</url>
 	
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.6.RELEASE</version>
-		<relativePath />
-	</parent>
+        <artifactId>ch-12</artifactId>
+        <groupId>com.fangjia</groupId>
+        <version>1.0</version>
+		<relativePath>../ch-12 <relativePath>
+    </parent>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

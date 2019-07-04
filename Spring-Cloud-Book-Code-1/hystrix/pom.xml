@@ -2,14 +2,18 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.fangjia</groupId>
 	<artifactId>hystrix</artifactId>
-	<version>1.0</version>
 	<packaging>jar</packaging>
-
 	<name>hystrix</name>
 	<url>http://maven.apache.org</url>
 
+	<parent>
+        <artifactId>Spring-Cloud-Book-Code-1</artifactId>
+        <groupId>com.fangjia</groupId>
+        <version>1.0</version>
+		<!-- <relativePath>../Spring-Cloud-Book-Code-1 <relativePath> -->
+    </parent>
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -26,5 +30,19 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<!--TODO en.. -->
+		<dependency>      
+			 <groupId>com.fangjia</groupId>  
+			 <artifactId>Spring-Cloud-Book-Code-1</artifactId>  
+			 <version>1.0</version>   
+			 <exclusions>    
+				   <exclusion>        
+						<groupId>org.springframework.boot</groupId>            
+						<artifactId>spring-boot-starter-parent</artifactId>    
+				   </exclusion>    
+			 </exclusions>    
+		</dependency>  
+
 	</dependencies>
 </project>

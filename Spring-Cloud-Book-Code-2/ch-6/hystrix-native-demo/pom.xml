@@ -3,11 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.cxytiandi</groupId>
 	<artifactId>hystrix-native-demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-
 	<name>hystrix-native-demo</name>
 	<url>http://maven.apache.org</url>
 
@@ -15,6 +12,15 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<!--TODO -->
+	<parent>
+        <artifactId>ch-6</artifactId>
+        <groupId>com.fangjia</groupId>
+        <version>1.0</version>
+		<relativePath>../ch-6 <relativePath>
+    </parent>
+	
+	
 	<dependencies>
 		<dependency>
 			<groupId>com.netflix.hystrix</groupId>

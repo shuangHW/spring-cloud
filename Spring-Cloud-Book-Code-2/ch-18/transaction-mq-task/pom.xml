@@ -2,11 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.fangjia</groupId>
 	<artifactId>transaction-mq-task</artifactId>
-	<version>1.0</version>
 	<packaging>jar</packaging>
-
 	<name>transaction-mq-task</name>
 	<url>http://maven.apache.org</url>
 
@@ -15,11 +12,12 @@
 	</properties>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.6.RELEASE</version>
-		<relativePath />
-	</parent>
+        <artifactId>ch-18</artifactId>
+        <groupId>com.fangjia</groupId>
+        <version>1.0</version>
+		<relativePath>../ch-18 <relativePath>
+    </parent>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

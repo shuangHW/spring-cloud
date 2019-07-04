@@ -2,11 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.cxytiandi</groupId>
 	<artifactId>elastic-job-spring-boot-demo</artifactId>
-	<version>1.0</version>
 	<packaging>jar</packaging>
-
 	<name>elastic-job-spring-boot-demo</name>
 	<url>http://maven.apache.org</url>
 
@@ -15,10 +12,11 @@
 	</properties>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.0.RELEASE</version>
-	</parent>
+        <artifactId>ch-21</artifactId>
+        <groupId>com.fangjia</groupId>
+        <version>1.0</version>
+		<relativePath>../ch-21 <relativePath>
+    </parent>
 
 	<dependencies>
 	
