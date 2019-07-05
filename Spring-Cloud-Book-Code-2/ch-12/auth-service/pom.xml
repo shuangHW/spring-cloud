@@ -37,7 +37,8 @@
 			<version>0.7.0</version>
 		</dependency>
 		<dependency>
-			<groupId>com.cxytiandi</groupId>
+			<!-- <groupId>com.cxytiandi</groupId> -->
+			<groupId>com.fangjia</groupId>
 			<artifactId>auth-common</artifactId>
 			<version>1.0</version>
 		</dependency>

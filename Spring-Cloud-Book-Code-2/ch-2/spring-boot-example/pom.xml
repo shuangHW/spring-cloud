@@ -28,19 +28,21 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<dependency>   		    
+	<!-- 	<dependency>   		    
 			<groupId>org.springframework.boot</groupId>   		       
-			<artifactId>spring-boot-devtools</artifactId>   
-		</dependency>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+         	<scope>true</scope>
+		</dependency> -->
 		<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <dependency>
+        <!-- <dependency>
 		    <groupId>com.cxytiandi</groupId>
 		    <artifactId>spring-boot-starter-demo</artifactId>
 		    <version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

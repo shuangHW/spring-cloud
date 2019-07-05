@@ -121,6 +121,10 @@
 - spring-boot-starter-swagger
    API文档管理，代码地址：<https://github.com/yinjihuan/spring-boot-starter-swagger> 使用方式同上
 
+
+spring-boot-starter-lock-redis
+代码地址：<https://github.com/yinjihuan/spring-boot-starter-lock-redis> 使用方式同上
+
 ## 启动fangjia-eureka
 
 上面好了之后我们就可以启动项目了，首选启动的是fangjia-eureka，执行EurekaServerApplication中的main方法即可。测试的话单节点就够了，如果要启动集群可以参考我的文章。

@@ -8,7 +8,6 @@
         <groupId>com.fangjia</groupId>
         <artifactId>spring-cloud</artifactId>
         <version>1.0</version>
-        <relativePath/>
     </parent>
 	
     <artifactId>Spring-Cloud-Book-Code-2</artifactId>
