@@ -15,9 +15,7 @@
 	<parent>
         <artifactId>ch-3</artifactId>
         <groupId>com.fangjia</groupId>
-        <version>1.0</version>
-		<relativePath>../ch-3 <relativePath>
-    </parent>
+        <version>1.0</version></parent>
 	
 	<dependencyManagement>
 		<dependencies>

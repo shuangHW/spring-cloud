@@ -2,53 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	 <modelVersion>4.0.0</modelVersion>
 	
-	<!--基于Springboot-->
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.4.RELEASE</version>
+        <groupId>com.fangjia</groupId>
+        <artifactId>spring-cloud</artifactId>
+        <version>1.0</version>
         <relativePath/>
     </parent>
 	
-	<groupId>com.fangjia</groupId>
+	<!-- <groupId>com.fangjia</groupId> -->
     <artifactId>Spring-Cloud-Book-Code-1</artifactId>
-    <version>1.0</version>
+    <!-- <version>1.0</version> -->
     <packaging>pom</packaging>
     <url>http://www.aaaa.com</url>
-	
-	<licenses>
-        <license>
-            <name>The Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <name>匿名</name>
-            <email>123456465@qq.com</email>
-            <url>http://www.ooo.com</url>
-            <organization>xxxx限公司</organization>
-            <organizationUrl>http://www.ooo2.com</organizationUrl>
-        </developer>
-    </developers>
-	
-	<!--
-	<scm>
-        <tag>master</tag>
-        <url>https://github.com/shuangHW/spring-cloud.git</url>
-        <connection>scm:git:https://github.com/shuangHW/spring-cloud.git</connection>
-        <developerConnection>scm:git:https://github.com/shuangHW/spring-cloud.git</developerConnection>
-    </scm>
-	
-    <properties>
-        <spring-boot.version>2.0.1.RELEASE</spring-boot.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-    </properties>
-	-->
-	
 	
     <modules>
         <module>fangjia-api-client</module>
@@ -76,21 +41,8 @@
 	</modules>
 
 	
-	<!--
+	
     <dependencies>
-        jsp支持
-        servlet 依赖.
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-        </dependency>
-		-->
-		
         <!--spring boot 相关开始
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -110,22 +62,19 @@
         </dependency>
 		-->
         <!--spring boot 相关结束-->
-		
-		
-        <!--热部署动态更新-->
-        <!--
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-        </dependency>
     </dependencies>
-    -->
     
-	<!--
 	<dependencyManagement>  
-          
         <dependencies>  
+         <!--  使用场景：当父依赖是公司内部依赖时（PS：不是spring-boot-starter-parent），需要这样做。 -->
+		 <!-- Spring Boot 依赖 -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>1.5.4.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
         	<dependency>  
 	            <groupId>junit</groupId>  
 	            <artifactId>junit</artifactId>  
@@ -140,7 +89,6 @@
 	        </dependency>
         </dependencies>  
     </dependencyManagement> 
-	-->
 	
 	<!-- 阿里云maven仓库 -->
 	<!--     

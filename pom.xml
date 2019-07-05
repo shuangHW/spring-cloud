@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.fangjia</groupId>
-    <artifactId>Spring-Cloud</artifactId>
+    <artifactId>spring-cloud</artifactId>
     <version>1.0</version>
     <url>http://www.aaaa.com</url>
 	<packaging>pom</packaging>
@@ -12,4 +12,37 @@
         <module>Spring-Cloud-Book-Code-1</module>
         <module>Spring-Cloud-Book-Code-2</module>
 	</modules>
+	
+	<licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>匿名</name>
+            <email>123456465@qq.com</email>
+            <url>http://www.ooo.com</url>
+            <organization>xxxx限公司</organization>
+            <organizationUrl>http://www.ooo2.com</organizationUrl>
+        </developer>
+    </developers>
+    
+    <!--
+	<scm>
+        <tag>master</tag>
+        <url>https://github.com/shuangHW/spring-cloud.git</url>
+        <connection>scm:git:https://github.com/shuangHW/spring-cloud.git</connection>
+        <developerConnection>scm:git:https://github.com/shuangHW/spring-cloud.git</developerConnection>
+    </scm>
+	
+    <properties>
+        <spring-boot.version>2.0.1.RELEASE</spring-boot.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+	-->
 </project>
